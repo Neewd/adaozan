@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { ProductHero, ProductHeroProps } from "./components/ProductHero";
 import { LogoCloud } from "./components/LogoCloud";
 import { AboutHero } from "./components/AboutHero";
-import { ContactHero } from "./components/ContactHero";
 
 export const metadata: Metadata = {
 	title: "Adaozañ",
@@ -99,7 +98,7 @@ export default function Home() {
 					);
 				})}
 			</div>
-			<div className="flex relative border-b border-brown-100 z-10">
+			<div className="border-b border-brown-100">
 				<LogoCloud logos={logos} />
 			</div>
 			<div className="flex z-10 relative flex-col">
@@ -114,7 +113,6 @@ export default function Home() {
 					);
 				})}
 			</div>
-			<ContactHero />
 		</div>
 	);
 }

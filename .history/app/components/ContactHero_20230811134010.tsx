@@ -1,0 +1,24 @@
+export const ContactHero = () => {
+	const sentence = "N'hésitez pa sà nous contacter pour plus d'informations";
+	return (
+		<div className="flex">
+			<div className="basis-1/2 flex items-center">
+				<span>{sentence}</span>
+			</div>
+			<div className="basis-1/2 flex flex-col">
+				<a href="" className="p-12 bg-cream-100">
+					a
+				</a>
+				<a href="" className="p-12  bg-cream-100">
+					b
+				</a>
+				<a href="" className="p-12  bg-cream-100">
+					c
+				</a>
+				<a href="" className="p-12  bg-cream-100">
+					d
+				</a>
+			</div>
+		</div>
+	);
+};

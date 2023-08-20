@@ -36,12 +36,9 @@ export const ProductHero = ({
 					alt={imageAlt ?? ""}
 				/>
 				<motion.div
-					initial={{ width: "100%" }}
-					whileInView={{ width: "0%" }}
+					initial={{ opacity: 1 }}
+					whileInView={{ opacity: 0 }}
 					viewport={{ once: true }}
-					transition={{
-						duration: ".5",
-					}}
 					className="bg-cream-100 w-full absolute inset-0 h-full  border-r border-brown-100"
 				></motion.div>
 			</div>

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { ProductHero, ProductHeroProps } from "./components/ProductHero";
 import { LogoCloud } from "./components/LogoCloud";
 import { AboutHero } from "./components/AboutHero";
-import { ContactHero } from "./components/ContactHero";
+import { ContactHero } from "../.history/app/components/ContactHero_20230811101628";
 
 export const metadata: Metadata = {
 	title: "Adaozañ",

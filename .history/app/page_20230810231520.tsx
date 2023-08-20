@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { ProductHero, ProductHeroProps } from "./components/ProductHero";
 import { LogoCloud } from "./components/LogoCloud";
 import { AboutHero } from "./components/AboutHero";
-import { ContactHero } from "./components/ContactHero";
 
 export const metadata: Metadata = {
 	title: "Adaozañ",
@@ -114,7 +113,6 @@ export default function Home() {
 					);
 				})}
 			</div>
-			<ContactHero />
 		</div>
 	);
 }

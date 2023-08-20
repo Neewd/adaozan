@@ -40,7 +40,7 @@ export const ProductHero = ({
 					whileInView={{ width: "0%" }}
 					viewport={{ once: true }}
 					transition={{
-						duration: ".5",
+						duration: "250ms",
 					}}
 					className="bg-cream-100 w-full absolute inset-0 h-full  border-r border-brown-100"
 				></motion.div>

@@ -2,8 +2,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { ProductHero, ProductHeroProps } from "./components/ProductHero";
 import { LogoCloud } from "./components/LogoCloud";
-import { AboutHero } from "./components/AboutHero";
-import { ContactHero } from "./components/ContactHero";
 
 export const metadata: Metadata = {
 	title: "Adaozañ",
@@ -39,19 +37,7 @@ const logos: string[] = [
 
 const abouts = [
 	{
-		imageUrl: "/img/marc-de-pomme-sec.webp",
-		title: "A propos",
-		subtitle: "Marc de pommes",
-	},
-	{
-		imageUrl: "/img/transformation.webp",
-		title: "A propos",
-		subtitle: "Matière",
-	},
-	{
-		imageUrl: "/img/equipe.jpg",
-		title: "A propos",
-		subtitle: "Origines",
+		title: "",
 	},
 ];
 
@@ -99,22 +85,9 @@ export default function Home() {
 					);
 				})}
 			</div>
-			<div className="flex relative border-b border-brown-100 z-10">
+			<div>
 				<LogoCloud logos={logos} />
 			</div>
-			<div className="flex z-10 relative flex-col">
-				{abouts.map((about) => {
-					return (
-						<AboutHero
-							key={about.title}
-							imageUrl={about.imageUrl}
-							title={about.title}
-							subtitle={about.subtitle}
-						/>
-					);
-				})}
-			</div>
-			<ContactHero />
 		</div>
 	);
 }

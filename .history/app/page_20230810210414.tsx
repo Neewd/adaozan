@@ -2,8 +2,6 @@ import Image from "next/image";
 import { Metadata } from "next";
 import { ProductHero, ProductHeroProps } from "./components/ProductHero";
 import { LogoCloud } from "./components/LogoCloud";
-import { AboutHero } from "./components/AboutHero";
-import { ContactHero } from "./components/ContactHero";
 
 export const metadata: Metadata = {
 	title: "Adaozañ",
@@ -17,43 +15,18 @@ const products: ProductHeroProps[] = [
 		subtitle: "Echantillons",
 	},
 	{
-		imageUrl: "/img/broye_solo.webp",
+		imageUrl: "/img/marc-de-pomme.webp",
 		title: "Produits",
 		subtitle: "Objets",
 	},
 	{
-		imageUrl: "/img/credence.webp",
+		imageUrl: "/img/transformation.webp",
 		title: "Produits",
 		subtitle: "Projets-sur-mesure",
-		objectPosition: "right",
 	},
 ];
 
-const logos: string[] = [
-	"/img/region_bretagne.png",
-	"/img/fondation_france.png",
-	"/img/grdf.png",
-	"/img/quimperle.png",
-	"/img/technopole.png",
-];
-
-const abouts = [
-	{
-		imageUrl: "/img/marc-de-pomme-sec.webp",
-		title: "A propos",
-		subtitle: "Marc de pommes",
-	},
-	{
-		imageUrl: "/img/transformation.webp",
-		title: "A propos",
-		subtitle: "Matière",
-	},
-	{
-		imageUrl: "/img/equipe.jpg",
-		title: "A propos",
-		subtitle: "Origines",
-	},
-];
+const logos: string[] = ["logo1.png", "logo2.png", "logo3.png", "logo4.png"];
 
 export default function Home() {
 	return (
@@ -94,27 +67,13 @@ export default function Home() {
 							imageUrl={product.imageUrl}
 							title={product.title}
 							subtitle={product.subtitle}
-							objectPosition={product.objectPosition}
 						/>
 					);
 				})}
 			</div>
-			<div className="flex relative border-b border-brown-100 z-10">
+			<div>
 				<LogoCloud logos={logos} />
 			</div>
-			<div className="flex z-10 relative flex-col">
-				{abouts.map((about) => {
-					return (
-						<AboutHero
-							key={about.title}
-							imageUrl={about.imageUrl}
-							title={about.title}
-							subtitle={about.subtitle}
-						/>
-					);
-				})}
-			</div>
-			<ContactHero />
 		</div>
 	);
 }
