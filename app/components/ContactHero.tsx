@@ -9,7 +9,7 @@ export const ContactHero = () => {
 	const emailBody: string =
 		"Je vous contacte pour avoir de plus amples information sur vos produits et votre entreprise. Pouvons-nous convenir d'un rendez-vous ?";
 	const sentence =
-		"N'hésitez pas à nous contacter pour plus d'informations 👋";
+		"Pour plus d'informations, n'hésitez pas à nous contacter directement par mail juste ici 👋";
 	const networks = [
 		{
 			title: "Mail",

@@ -15,7 +15,7 @@ export const products = [
 		imageUrl: "/img/broye_solo.webp",
 		imageAlt: "Les objets réalisés par Adaozan",
 		title: "Produits",
-		subtitle: "Objets",
+		subtitle: "Premières créations",
 		slug: "objets",
 		price: 100,
 		availability: "A venir",
