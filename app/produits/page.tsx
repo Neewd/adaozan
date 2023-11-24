@@ -57,6 +57,12 @@ export default async function Produits() {
               slug={product.slug}
               id={product.id}
               description={product.description}
+              carousel={product.carousel}
+              content={product.content}
+              subContent={product.subContent}
+              details={product.details}
+              price={product.price}
+              orderButton={product.orderButton}
             />
           );
         })}
