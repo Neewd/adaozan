@@ -1,7 +1,7 @@
 import { ProductHero, ProductHeroProps } from './ProductHero';
 
 async function getProducts(): Promise<ProductHeroProps[]> {
-  const res = await fetch(`http://localhost:3000/api/produits`, {
+  const res = await fetch(`${process.env.BASE_URL}/api/produits`, {
     cache: 'no-store',
   });
 

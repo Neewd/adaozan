@@ -1,7 +1,7 @@
 import { AboutHero, AboutHeroProps } from './AboutHero';
 
 async function getAbouts(): Promise<AboutHeroProps[]> {
-  const res = await fetch(`http://localhost:3000/api/abouts`, {
+  const res = await fetch(`${process.env.BASE_URL}/api/abouts`, {
     cache: 'no-store',
   });
 

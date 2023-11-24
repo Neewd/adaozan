@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 async function getProduct(id: string) {
-  const res = await fetch(`http://localhost:3000/api/produits/${id}`, {
+  const res = await fetch(`${process.env.BASE_URL}/api/produits/${id}`, {
     cache: 'no-store',
   });
   const json = res.json();

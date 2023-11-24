@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 async function getAbout(id: string) {
-  const res = await fetch(`http://localhost:3000/api/abouts/${id}`, {
+  const res = await fetch(`${process.env.BASE_URL}/api/abouts/${id}`, {
     cache: 'no-store',
   });
 
