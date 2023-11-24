@@ -1,12 +1,14 @@
 import { AboutHero, AboutHeroProps } from './AboutHero';
 
+export const dynamic = 'force-dynamic';
+
 async function getAbouts(): Promise<AboutHeroProps[]> {
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/abouts`);
 
   if (!res.ok) {
-    console.log(res.ok);
     console.log(res.status);
     console.log(res.statusText);
+    console.log(res.text());
     throw new Error('Failed to fetch data');
   }
 

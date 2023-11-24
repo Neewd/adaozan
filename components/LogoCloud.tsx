@@ -15,7 +15,7 @@ export const LogoCloud = () => {
         {logos.map((logo) => {
           return (
             <div
-              className="px-12 py-4 flex-1bg-cream-100  z-20 flex items-center justify-center"
+              className="px-12 flex-1 py-4 flex-1bg-cream-100  z-20 flex items-center justify-center"
               key={logo}
             >
               <Image

@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   description: 'Terme breton, définition: recycler, revaloriser',
 };
 
+export const dynamic = 'force-dynamic';
+
 async function getAbout(id: string) {
   const res = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/api/abouts/${id}`
