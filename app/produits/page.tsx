@@ -1,27 +1,15 @@
 import Image from 'next/image';
-import { ProductHero, ProductHeroProps } from '@/components/ProductHero';
 import { ContactHero } from '@/components/ContactHero';
 import { Metadata } from 'next';
 import { Menu } from '@/components/Menu';
+import Products from '@/components/Products';
 
 export const metadata: Metadata = {
   title: 'Adaozañ - Produits',
   description: 'Terme breton, définition: recycler, revaloriser',
 };
 
-async function getProducts(): Promise<ProductHeroProps[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/produits`);
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
-
 export default async function Produits() {
-  const products: ProductHeroProps[] = await getProducts();
-
   return (
     <div className="w-full bg-brown-100 relative h-min min-h-full">
       <div className="flex-1 flex w-full h-[60vh] sticky top-0 z-1">
@@ -45,28 +33,7 @@ export default async function Produits() {
         </div>
       </div>
       <Menu />
-      <div className="flex z-10 relative">
-        {products.map((product) => {
-          return (
-            <ProductHero
-              key={product.id}
-              imageUrl={product.imageUrl}
-              title={product.title}
-              subtitle={product.subtitle}
-              objectPosition={product.objectPosition}
-              slug={product.slug}
-              id={product.id}
-              description={product.description}
-              carousel={product.carousel}
-              content={product.content}
-              subContent={product.subContent}
-              details={product.details}
-              price={product.price}
-              orderButton={product.orderButton}
-            />
-          );
-        })}
-      </div>
+      <Products />
       <ContactHero />
     </div>
   );

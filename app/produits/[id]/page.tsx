@@ -1,8 +1,5 @@
 import { ContactHero } from '@/components/ContactHero';
-import Carousel from '@/components/Carousel';
-import { Menu } from '@/components/Menu';
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Product from '@/components/Product';
 
 export const metadata: Metadata = {
