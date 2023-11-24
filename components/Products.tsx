@@ -1,9 +1,7 @@
 import { ProductHero, ProductHeroProps } from './ProductHero';
 
 async function getProducts(): Promise<ProductHeroProps[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/produits`, {
-    cache: 'no-store',
-  });
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/produits`);
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');

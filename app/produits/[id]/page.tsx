@@ -11,10 +11,7 @@ export const metadata: Metadata = {
 
 async function getProduct(id: string) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/produits/${id}`,
-    {
-      cache: 'no-store',
-    }
+    `${process.env.NEXT_PUBLIC_API_URL}/api/produits/${id}`
   );
   const json = res.json();
 

@@ -11,10 +11,7 @@ export const metadata: Metadata = {
 
 async function getAbout(id: string) {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/api/abouts/${id}`,
-    {
-      cache: 'no-store',
-    }
+    `${process.env.NEXT_PUBLIC_API_URL}/api/abouts/${id}`
   );
 
   if (!res.ok) {
