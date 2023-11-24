@@ -1,19 +1,10 @@
 import { ProductHero, ProductHeroProps } from './ProductHero';
 
-export const dynamic = 'force-dynamic';
-
-async function getProducts(): Promise<ProductHeroProps[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/produits`);
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
-
-export default async function Products() {
-  const products: ProductHeroProps[] = await getProducts();
+export default async function Products({
+  products,
+}: {
+  products: ProductHeroProps[];
+}) {
   return (
     <>
       <div className="flex z-10 relative">

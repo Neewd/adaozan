@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   title: 'Adaozañ - Produit',
   description: 'Terme breton, définition: recycler, revaloriser',
 };
-export const dynamic = 'force-dynamic';
 
 async function getProduct(id: string) {
   const res = await fetch(

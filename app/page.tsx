@@ -5,13 +5,37 @@ import { Menu } from '@/components/Menu';
 import Image from 'next/image';
 import Products from '@/components/Products';
 import Abouts from '@/components/Abouts';
+import { AboutHeroProps } from '@/components/AboutHero';
+import { ProductHeroProps } from '@/components/ProductHero';
 
 export const metadata: Metadata = {
   title: 'Adaozañ',
   description: 'Terme breton, définition: recycler, revaloriser',
 };
 
+export async function getAbouts(): Promise<AboutHeroProps[]> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/abouts`);
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
+async function getProducts(): Promise<ProductHeroProps[]> {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/produits`);
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
 export default async function Home() {
+  const abouts: AboutHeroProps[] = await getAbouts();
+  const products: ProductHeroProps[] = await getProducts();
   return (
     <div className="w-full bg-brown-100 relative h-min min-h-full">
       <div className="flex top-0 sticky w-full z-1 h-[90vh]">
@@ -41,8 +65,8 @@ export default async function Home() {
         </div>
       </div>
       <Menu />
-      <Products />
-      <Abouts />
+      <Products products={products} />
+      <Abouts abouts={abouts} />
       <LogoCloud />
       <ContactHero />
     </div>
