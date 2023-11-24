@@ -6,6 +6,7 @@ async function getAbouts(): Promise<AboutHeroProps[]> {
   });
 
   if (!res.ok) {
+    console.log(res.text());
     throw new Error('Failed to fetch data');
   }
 
