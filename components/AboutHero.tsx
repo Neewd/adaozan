@@ -7,7 +7,6 @@ import Link from 'next/link';
 
 export interface AboutDescription {
   id: number;
-  type: 'text' | 'number';
   imageUrl: string;
   imageAlt: string;
   title: string;
@@ -22,7 +21,7 @@ export interface AboutCard {
 }
 
 export interface AboutHeroProps {
-  id: string;
+  id: number;
   imageUrl: string;
   imageAlt?: string;
   title: string;

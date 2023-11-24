@@ -5,8 +5,6 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export type ObjectPosition = 'right' | 'center';
-
 export interface ProductHeroProps {
   id: number;
   imageUrl: string;
@@ -14,8 +12,14 @@ export interface ProductHeroProps {
   title: string;
   subtitle: string;
   slug: string;
-  objectPosition?: ObjectPosition;
+  objectPosition?: string;
   description?: string;
+  carousel: string[];
+  content: string;
+  subContent: string;
+  price: string;
+  details?: string[];
+  orderButton: string;
 }
 
 export const ProductHero = ({
@@ -24,7 +28,7 @@ export const ProductHero = ({
   imageAlt,
   title,
   subtitle,
-  objectPosition,
+  objectPosition = 'center',
   slug,
   description,
 }: ProductHeroProps) => {

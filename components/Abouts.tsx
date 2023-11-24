@@ -1,17 +1,7 @@
-import { AboutHero, AboutHeroProps } from './AboutHero';
-
-export async function getAbouts(): Promise<AboutHeroProps[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/a-propos`);
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
+import { AboutHero } from './AboutHero';
+import { abouts } from './a-propos.data';
 
 export default async function Abouts() {
-  const abouts: AboutHeroProps[] = await getAbouts();
   return (
     <>
       <div className="flex z-10 relative">

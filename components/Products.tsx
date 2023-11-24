@@ -1,17 +1,7 @@
-import { ProductHero, ProductHeroProps } from './ProductHero';
-
-async function getProducts(): Promise<ProductHeroProps[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/produits`);
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data');
-  }
-
-  return res.json();
-}
+import { ProductHero } from './ProductHero';
+import { products } from './produits.data';
 
 export default async function Products() {
-  const products: ProductHeroProps[] = await getProducts();
   return (
     <>
       <div className="flex z-10 relative">
@@ -25,6 +15,12 @@ export default async function Products() {
               objectPosition={product.objectPosition}
               slug={product.slug}
               id={product.id}
+              carousel={product.carousel}
+              content={product.content}
+              subContent={product.subContent}
+              details={product.details}
+              price={product.price}
+              orderButton={product.orderButton}
             />
           );
         })}
