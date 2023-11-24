@@ -3,8 +3,6 @@ import Abouts from '@/components/Abouts';
 import { Menu } from '@/components/Menu';
 import { ContactHero } from '@/components/ContactHero';
 import Image from 'next/image';
-import { AboutHeroProps } from '@/components/AboutHero';
-import { getAbouts } from '../page';
 
 export const metadata: Metadata = {
   title: 'Adaozañ - A propos',
@@ -12,7 +10,6 @@ export const metadata: Metadata = {
 };
 
 export default async function About() {
-  const abouts: AboutHeroProps[] = await getAbouts();
   return (
     <>
       <div className="flex top-0 sticky w-full z-1 h-[60vh] bg-brown-100 text-cream-100">
@@ -36,7 +33,7 @@ export default async function About() {
         </div>
       </div>
       <Menu />
-      <Abouts abouts={abouts} />
+      <Abouts />
       <ContactHero />
     </>
   );
