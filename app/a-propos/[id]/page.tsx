@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
-import { ContactHero } from '@/app/components/ContactHero';
-import { AboutHeroProps } from '@/app/components/AboutHero';
-import { Menu } from '@/app/components/Menu';
+import { ContactHero } from '@/components/ContactHero';
+import { AboutHeroProps } from '@/components/AboutHero';
+import { Menu } from '@/components/Menu';
 import Image from 'next/image';
 import classNames from 'classnames';
 

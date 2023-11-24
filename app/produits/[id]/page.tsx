@@ -1,7 +1,6 @@
-import { ContactHero } from '@/app/components/ContactHero';
-import Carousel from '@/app/components/Carousel';
-
-import { Menu } from '@/app/components/Menu';
+import { ContactHero } from '@/components/ContactHero';
+import Carousel from '@/components/Carousel';
+import { Menu } from '@/components/Menu';
 import { Metadata } from 'next';
 import Image from 'next/image';
 

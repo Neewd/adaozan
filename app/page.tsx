@@ -1,11 +1,10 @@
 import { Metadata } from 'next';
-import { LogoCloud } from './components/LogoCloud';
-import { ContactHero } from './components/ContactHero';
-import { Menu } from './components/Menu';
-
+import { LogoCloud } from '@/components/LogoCloud';
+import { ContactHero } from '@/components/ContactHero';
+import { Menu } from '@/components/Menu';
 import Image from 'next/image';
-import Products from './components/Products';
-import Abouts from './components/Abouts';
+import Products from '@/components/Products';
+import Abouts from '@/components/Abouts';
 
 export const metadata: Metadata = {
   title: 'Adaozañ',

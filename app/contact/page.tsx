@@ -1,8 +1,6 @@
 import { Metadata } from 'next';
-import Abouts from '../components/Abouts';
-import { LogoCloud } from '../components/LogoCloud';
-import { Menu } from '../components/Menu';
-import { ContactHero } from '../components/ContactHero';
+import { Menu } from '@/components/Menu';
+import { ContactHero } from '@/components/ContactHero';
 import Image from 'next/image';
 
 export const metadata: Metadata = {

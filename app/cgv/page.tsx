@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { ContactHero } from '@/app/components/ContactHero';
-import { Menu } from '@/app/components/Menu';
+import { ContactHero } from '@/components/ContactHero';
+import { Menu } from '@/components/Menu';
 
 export default function CGV() {
   return (

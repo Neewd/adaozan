@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { ProductHero, ProductHeroProps } from '../components/ProductHero';
-import { ContactHero } from '../components/ContactHero';
+import { ProductHero, ProductHeroProps } from '@/components/ProductHero';
+import { ContactHero } from '@/components/ContactHero';
 import { Metadata } from 'next';
-import { Menu } from '../components/Menu';
+import { Menu } from '@/components/Menu';
 
 export const metadata: Metadata = {
   title: 'Adaozañ - Produits',
