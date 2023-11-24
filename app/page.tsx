@@ -14,9 +14,10 @@ export const metadata: Metadata = {
 };
 
 export async function getAbouts(): Promise<AboutHeroProps[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/abouts`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/a-propos`);
 
   if (!res.ok) {
+    console.log('res', res);
     throw new Error('Failed to fetch data');
   }
 
