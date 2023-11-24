@@ -8,7 +8,7 @@ async function getAbouts(): Promise<AboutHeroProps[]> {
   if (!res.ok) {
     console.log(res.status);
     console.log(res.statusText);
-    console.log(res.text());
+    console.log(await res.text());
     throw new Error('Failed to fetch data');
   }
 
