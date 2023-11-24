@@ -11,9 +11,12 @@ export const metadata: Metadata = {
 };
 
 async function getProduct(id: string) {
-  const res = await fetch(`${process.env.BASE_URL}/api/produits/${id}`, {
-    cache: 'no-store',
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/produits/${id}`,
+    {
+      cache: 'no-store',
+    }
+  );
   const json = res.json();
 
   if (!res.ok) {

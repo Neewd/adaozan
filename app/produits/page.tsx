@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 async function getProducts(): Promise<ProductHeroProps[]> {
-  const res = await fetch(`${process.env.BASE_URL}/api/produits`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/produits`, {
     cache: 'no-store',
   });
 
