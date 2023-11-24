@@ -15,6 +15,7 @@ export interface ProductHeroProps {
   subtitle: string;
   slug: string;
   objectPosition?: ObjectPosition;
+  description?: string;
 }
 
 export const ProductHero = ({
@@ -25,15 +26,17 @@ export const ProductHero = ({
   subtitle,
   objectPosition,
   slug,
+  description,
 }: ProductHeroProps) => {
   return (
     <Link
       href={`produits/${id}`}
-      className=' flex w-full relative'>
-      <div className='flex w-full h-[500px] bg-cream-100 cursor-pointer'>
-        <div className='flex basis-4/12 relative border-b border-brown-100'>
+      className=" flex w-full relative p-4 bg-cream-100 border-r border-b border-brown-100"
+    >
+      <div className="flex flex-col w-full h-[500px] bg-cream-100 cursor-pointer">
+        <div className="flex h-full w-full relative ">
           <Image
-            className={classNames('object-cover border-r border-brown-100', {
+            className={classNames('object-cover', {
               'object-right': objectPosition === 'right',
             })}
             src={imageUrl}
@@ -47,14 +50,29 @@ export const ProductHero = ({
             transition={{
               duration: '.5',
             }}
-            className='bg-cream-100 w-full absolute inset-0 h-full  border-r border-brown-100'></motion.div>
+            className="bg-cream-100 w-full absolute inset-0 h-full "
+          ></motion.div>
         </div>
-        <div className='flex basis-8/12 relative gap-3 flex-col border-b border-brown-100'>
-          <div className='sticky p-12  top-24'>
-            <div className='text-sm text-brown-100'>{title}</div>
-            <div className='text-4xl text-brown-100 font-semibold font-heading'>
-              {subtitle}
-            </div>
+        <div className="flex relative gap-3 flex-col">
+          <div className="sticky py-4 top-24">
+            {!description && (
+              <>
+                <div className="text-sm text-brown-100">{title}</div>
+                <div className="text-4xl text-brown-100 font-semibold font-heading">
+                  {subtitle}
+                </div>
+              </>
+            )}
+            {description && (
+              <>
+                <div className="text-lg text-brown-100  font-semibold">
+                  {subtitle}
+                </div>
+                <div className="text-xl text-brown-100 font-heading">
+                  {description}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
