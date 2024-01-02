@@ -12,7 +12,7 @@ export function Menu() {
 								className="flex"
 								src="/img/logo-tilde-white.png"
 								alt="Link to home page"
-								width={40}
+								width={25}
 								height={35}
 							/>
 						</Link>

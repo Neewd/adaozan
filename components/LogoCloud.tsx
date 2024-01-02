@@ -2,12 +2,12 @@ import Image from "next/image";
 
 const logos: string[] = [
 	"/img/partenaires/region-bretagne.png",
-	"/img/partenaires/fondation-de-france.png",
+	"/img/partenaires/technopole.png",
 	"/img/partenaires/grdf.png",
 	"/img/partenaires/live-for-good.png",
 	"/img/partenaires/banque-postale.png",
 	"/img/partenaires/makesense.png",
-	"/img/partenaires/technopole.png",
+	"/img/partenaires/fondation-de-france.png",
 ];
 
 export const LogoCloud = () => {

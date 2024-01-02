@@ -17,7 +17,7 @@ export default async function Produits() {
 				<div className="flex basis-4/12 p-12 text-2xl font-heading">
 					<Link href="/">
 						<Image
-							src="/img/logo-white.png"
+							src="/img/logo-description-white.png"
 							width={500}
 							height={500}
 							alt="Logo Adaozan"

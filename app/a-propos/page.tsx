@@ -17,7 +17,7 @@ export default async function About() {
 				<div className="basis-4/12 p-12">
 					<Link href="/">
 						<Image
-							src="/img/logo-white.png"
+							src="/img/logo-description-white.png"
 							width={500}
 							height={500}
 							alt="Logo Adaozan"

@@ -17,7 +17,7 @@ export default async function About({ id }: { id: string }) {
 							<div className="flex basis-4/12 flex-col justify-between h-full relative">
 								<Image
 									className="object-cover px-8 py-4"
-									src="/img/logo-white.png"
+									src="/img/logo-description-white.png"
 									width={250}
 									height={500}
 									alt="Logo Adaozan"

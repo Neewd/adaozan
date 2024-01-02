@@ -16,7 +16,7 @@ export default function Contact() {
 				<div className="basis-4/12 p-12">
 					<Link href="/">
 						<Image
-							src="/img/logo-white.png"
+							src="/img/logo-description-white.png"
 							width={500}
 							height={500}
 							alt="Logo Adaozan"
@@ -42,7 +42,7 @@ export default function Contact() {
 				<div className="flex flex-1 flex-col p-8 border-r border-brown-100 justify-between">
 					<span className="text-lg">Nous écrire</span>
 					<div className="flex flex-col">
-						<span className="font-bold">contact@adazoan.fr</span>
+						<span className="font-bold">contact@adaozan.fr</span>
 						<span>instagram/facebook/linkedin</span>
 					</div>
 				</div>
