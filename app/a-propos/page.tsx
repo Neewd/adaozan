@@ -3,6 +3,7 @@ import Abouts from "@/components/Abouts";
 import { Menu } from "@/components/Menu";
 import { ContactHero } from "@/components/ContactHero";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
 	title: "Adaozañ - A propos",
@@ -14,12 +15,14 @@ export default async function About() {
 		<>
 			<div className="flex top-0 sticky w-full z-1 h-[60vh] bg-brown-100 text-cream-100">
 				<div className="basis-4/12 p-12">
-					<Image
-						src="/img/logo-white.png"
-						width={500}
-						height={500}
-						alt="Logo Adaozan"
-					/>
+					<Link href="/">
+						<Image
+							src="/img/logo-white.png"
+							width={500}
+							height={500}
+							alt="Logo Adaozan"
+						/>
+					</Link>
 				</div>
 				<div className="basis-8/12 relative">
 					<div className="flex h-full w-full flex-col justify-between text-cream-100 p-12 items-end">

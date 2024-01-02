@@ -12,10 +12,11 @@ export const ContactHero = () => {
 		"Je vous contacte pour avoir de plus amples information sur vos produits et votre entreprise. Pouvons-nous convenir d'un rendez-vous ?";
 	const sentence =
 		"Pour plus d'informations, n'hésitez pas à nous contacter directement par mail juste ici 👋";
+	const mail = `mailto:${email}?subject=${emailSubject}&body=${emailBody}`;
 	const networks = [
 		{
 			title: "Mail",
-			href: `mailto:${email}?subject=${emailSubject}&body=${emailBody}`,
+			href: mail,
 		},
 		{
 			title: "Instagram",
@@ -35,9 +36,13 @@ export const ContactHero = () => {
 		<>
 			<div className="flex border-b border-brown-100">
 				<div className="basis-9/12 flex items-center bg-cream-100 z-10 border-r border-brown-100 flex-col-reverse">
-					<span className="self-end items-end p-12 text-brown-100 text-3xl leading-snug">
+					<a
+						className="self-end items-end p-12 text-brown-100 text-3xl leading-snug"
+						href={mail}
+					>
+						{" "}
 						{sentence}
-					</span>
+					</a>
 				</div>
 				<div className="basis-3/12 flex flex-col">
 					{networks.map((network, index) => {
@@ -75,8 +80,8 @@ export const ContactHero = () => {
 						className="block"
 						src="/img/logo-tilde-white.png"
 						alt="Link to home page"
-						height={50}
-						width={50}
+						width={40}
+						height={35}
 					/>
 				</Link>
 				<div className="flex flex-col text-cream-100 flex-1 items-end px-4 py-4 font-heading">
