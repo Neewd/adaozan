@@ -6,3 +6,21 @@
   font-family: Optima;
   src: url('/fonts/Optima.ttc');
 }
+
+@font-face {
+  font-family: 'Optima';
+  src: url('/fonts/Optima-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Optima';
+  src: url('/fonts/Optima-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Optima';
+  src: url('/fonts/Optima-ExtraBlack.ttf') format('truetype');
+  font-weight: 900;
+}
