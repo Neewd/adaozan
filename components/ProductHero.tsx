@@ -72,7 +72,7 @@ export const ProductHero = ({
 								<div className="text-sm text-brown-100">
 									{title}
 								</div>
-								<div className="text-4xl text-brown-100 font-semibold font-heading">
+								<div className="text-2xl text-brown-100 font-semibold font-heading">
 									{subtitle}
 								</div>
 							</>
@@ -82,7 +82,7 @@ export const ProductHero = ({
 								<div className="text-lg text-brown-100  font-semibold">
 									{subtitle}
 								</div>
-								<div className="text-xl text-brown-100 font-heading">
+								<div className="text- text-brown-100 font-heading">
 									{description}
 								</div>
 							</>
