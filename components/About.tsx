@@ -12,7 +12,7 @@ export default async function About({ id }: { id: string }) {
 		<>
 			{about && (
 				<>
-					<div className="flex top-0 sticky w-full z-1 h-[40vh]">
+					<div className="flex top-0 sticky w-full z-1 h-[90vh]">
 						<div className="flex-1 ">
 							<div className="flex basis-4/12 p-6 flex-col justify-between h-full relative">
 								<Image

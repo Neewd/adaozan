@@ -35,7 +35,7 @@ export const ProductHero = ({
 	return (
 		<Link
 			href={`produits/${id}`}
-			className=" flex w-full relative p-4 bg-cream-100 border-r border-b border-brown-100 font-heading"
+			className=" flex w-full relative p-4 bg-cream-100 border-r border-b border-brown-100 font-heading last:border-r-0"
 		>
 			<div className="flex flex-col w-full bg-cream-100 cursor-pointer aspect-square">
 				<div className="flex h-auto w-full relative ">

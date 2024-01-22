@@ -10,29 +10,39 @@ export const metadata: Metadata = {
 	description: "Terme breton, définition: recycler, revaloriser",
 };
 
-export default async function Produits() {
+export default function Produits() {
 	return (
 		<div className="w-full bg-brown-100 relative h-min min-h-full">
-			<div className="flex-1 flex w-full h-[60vh] sticky top-0 z-1">
-				<div className="flex basis-4/12 p-6 text-2xl font-heading">
+			<div className="flex top-0 sticky w-full z-1 h-[90vh]">
+				<div className="basis-4/12 p-6 flex flex-col justify-between">
 					<Link href="/">
 						<Image
 							src="/img/logo-description-white.png"
 							width={500}
 							height={500}
 							alt="Logo Adaozan"
+							className="object-cover"
 						/>
 					</Link>
+					<div className="flex flex-col gap-4 text-xl font-heading">
+						<span className="text-cream-100 font-heading-bold font-bold text-2xl">
+							Produits
+						</span>
+						<span className="text-cream-100">
+							Des objets naturels fabriqués artisanalement à
+							partir de déchets de pommes locaux, comme
+							alternative innovante aux produits issus de
+							l’industrie petro-chimique
+						</span>
+					</div>
 				</div>
-				<div className="flex basis-8/12  flex-col justify-between">
-					<span className="text-cream-100 p-12 text-3xl text-right">
-						Produits
-					</span>
-					<span className="text-2xl font-heading font-bold p-8 text-cream-100 text-right">
-						Des objets naturels fabriqués artisanalement à partir de
-						déchets de pommes locaux, comme alternative innovante
-						aux produits issus de l’industrie petro-chimique
-					</span>
+				<div className="basis-8/12 relative p-12">
+					<Image
+						className="p-4 object-cover"
+						src="/img/valorisation-marc-de-pomme.webp"
+						alt="Valorisation marc de pomme"
+						fill={true}
+					/>
 				</div>
 			</div>
 			<Menu />

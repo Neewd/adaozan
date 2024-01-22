@@ -13,7 +13,7 @@ export default async function Product({ id }: { id: string }) {
 			{product && (
 				<>
 					<div className="flex top-0 sticky w-full z-1 h-[90vh]">
-						<div className="flex flex-1 p-6 h-full flex-col justify-between ">
+						<div className="flex basis-4/12 p-6 h-full flex-col justify-between ">
 							<Image
 								src="/img/logo-description-white.png"
 								width={500}
@@ -29,9 +29,9 @@ export default async function Product({ id }: { id: string }) {
 								</span>
 							</div>
 						</div>
-						<div className="flex-1 relative">
+						<div className="basis-8/12 relative">
 							<Image
-								className="p-4"
+								className="p-4 object-cover"
 								src={product.imageUrl}
 								alt={product.imageAlt ?? ""}
 								priority={true}
