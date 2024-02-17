@@ -1,51 +1,93 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import classNames from "classnames";
+import { Image as PrestationImage } from "./prestations.data";
 
-export default function Carousel({ images }: { images: string[] }) {
-	const [curentIndex, setCurrentIndex] = useState(0);
+export type CursorColor = "brown" | "cream";
+
+export default function Carousel({
+	images,
+	cursorColor = "brown",
+}: {
+	images: PrestationImage[];
+	cursorColor?: CursorColor;
+}) {
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+	const [previousImageIndex, setPreviousImageIndex] = useState(0);
+	const [nextImageIndex, setNextImageIndex] = useState(0);
+
+	const [previousImageUrl, setPreviousImageUrl] = useState("");
+	const [currentImageUrl, setCurrentImageUrl] = useState("");
+	const [nextImageUrl, setNextImageUrl] = useState("");
+
+	useEffect(() => {
+		let previousImageIndex = currentImageIndex - 1;
+		let nextImageIndex = currentImageIndex + 1;
+		setPreviousImageIndex(previousImageIndex);
+		setNextImageIndex(nextImageIndex);
+
+		setCurrentImageUrl(images[currentImageIndex]?.url);
+		setPreviousImageUrl(images[previousImageIndex]?.url);
+		setNextImageUrl(images[nextImageIndex]?.url);
+
+		if (currentImageIndex === 0) {
+			previousImageIndex = images.length - 1;
+			setPreviousImageIndex(images.length - 1);
+			setPreviousImageUrl(images[previousImageIndex]?.url);
+		}
+		if (currentImageIndex === images.length) {
+			setNextImageIndex(0);
+			setNextImageUrl(images[0]?.url);
+		}
+	}, [currentImageIndex]);
 
 	const handleNext = () => {
-		setCurrentIndex((prevIndex) =>
+		setCurrentImageIndex((prevIndex) =>
 			prevIndex + 1 === images.length ? 0 : prevIndex + 1
 		);
 	};
 
 	const handlePrevious = () => {
-		setCurrentIndex((prevIndex) =>
+		setCurrentImageIndex((prevIndex) =>
 			prevIndex - 1 < 0 ? images.length - 1 : prevIndex - 1
 		);
 	};
 
 	return (
 		<div className="bg-cream-100 h-full w-full relative">
-			<Image
-				key={curentIndex}
-				src={images[curentIndex - 1]}
-				alt=""
-				fill={true}
-				className="hidden"
-			/>
-			<Image
-				key={curentIndex}
-				src={images[curentIndex]}
-				alt=""
-				fill={true}
-				priority={true}
-				className="object-cover min-h-full w-full"
-			/>
-			<Image
-				key={curentIndex}
-				src={images[curentIndex + 1]}
-				alt=""
-				fill={true}
-				className="hidden"
-			/>
-
-			<div className="absolute inset-0 flex items-center justify-between px-4 h-full">
+			<>
+				<Image
+					key={previousImageIndex}
+					src={previousImageUrl}
+					alt=""
+					fill={true}
+					className="hidden"
+				/>
+				<Image
+					key={currentImageIndex}
+					src={currentImageUrl}
+					alt=""
+					fill={true}
+					priority={true}
+					className="object-cover min-h-full w-full"
+				/>
+				<Image
+					key={nextImageIndex}
+					src={nextImageUrl}
+					alt=""
+					fill={true}
+					className="hidden"
+				/>
+			</>
+			<div className="absolute inset-0 flex items-center justify-between px-4 h-full z-10">
 				<div
-					className="hover:cursor-pointer fill-brown-100"
+					className={classNames("hover:cursor-pointer", {
+						"fill-brown-100": cursorColor === "brown",
+						"fill-cream-100": cursorColor === "cream",
+					})}
 					onClick={handleNext}
 				>
 					<svg
@@ -58,7 +100,10 @@ export default function Carousel({ images }: { images: string[] }) {
 					</svg>
 				</div>
 				<div
-					className="hover:cursor-pointer fill-brown-100"
+					className={classNames("hover:cursor-pointer", {
+						"fill-brown-100": cursorColor === "brown",
+						"fill-cream-100": cursorColor === "cream",
+					})}
 					onClick={handlePrevious}
 				>
 					<svg

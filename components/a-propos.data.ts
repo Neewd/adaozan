@@ -1,7 +1,7 @@
 export const abouts = [
 	{
 		id: 1,
-		imageUrl: "/img/a-propos/marc-de-pomme-cover.png",
+		imageUrl: "/img/a-propos/marc-de-pomme-cover.webp",
 		title: "A propos",
 		subtitle: "Le marc de pommes",
 		descriptions: [
@@ -63,13 +63,13 @@ export const abouts = [
 	},
 	{
 		id: 2,
-		imageUrl: "/img/a-propos/materiaux.png",
+		imageUrl: "/img/a-propos/materiaux.webp",
 		title: "A propos",
 		subtitle: "Notre éco-matériau",
 		descriptions: [
 			{
 				id: 1,
-				imageUrl: "/img/a-propos/materiaux/innovation.png",
+				imageUrl: "/img/a-propos/materiaux/innovation.webp",
 				imageAlt: "",
 				title: "Innovation",
 				content:
@@ -77,7 +77,7 @@ export const abouts = [
 			},
 			{
 				id: 2,
-				imageUrl: "/img/a-propos/materiaux/texture.png",
+				imageUrl: "/img/a-propos/materiaux/texture.webp",
 				imageAlt: "",
 				title: "Textures",
 				content:
@@ -85,7 +85,7 @@ export const abouts = [
 			},
 			{
 				id: 3,
-				imageUrl: "/img/a-propos/materiaux/transformation.png",
+				imageUrl: "/img/a-propos/materiaux/transformation.webp",
 				imageAlt: "",
 				title: "Transformation",
 				content:
@@ -97,13 +97,13 @@ export const abouts = [
 	},
 	{
 		id: 3,
-		imageUrl: "/img/a-propos/histoire.png",
+		imageUrl: "/img/a-propos/histoire.webp",
 		title: "A propos",
 		subtitle: "Notre histoire",
 		descriptions: [
 			{
 				id: 1,
-				imageUrl: "/img/a-propos/histoire/origine.png",
+				imageUrl: "/img/a-propos/histoire/origine.webp",
 				imageAlt: "Youenn et Guillaume travaillant dans leur atelier",
 				title: "Origine",
 				content:
@@ -111,14 +111,14 @@ export const abouts = [
 			},
 			{
 				id: 2,
-				imageUrl: "/img/a-propos/histoire/valeur.png",
+				imageUrl: "/img/a-propos/histoire/valeur.webp",
 				imageAlt: "",
 				title: "Valeurs",
 				content: `Adaozañ, qui signifie “recycler” en Breton, est un projet ancré dans l’économie circulaire et porteur d’une démarche éthique et locale, que ce soit par sa recherche d’économie de moyens ou par sa volonté de développer un écosystème sur le territoire où il s’inscrit.`,
 			},
 			{
 				id: 3,
-				imageUrl: "/img/a-propos/histoire/ambition.png",
+				imageUrl: "/img/a-propos/histoire/ambition.webp",
 				imageAlt: "Produit fini",
 				title: "Ambitions",
 				content: `Au-delà de lutter directement contre une source de pollution des sols, Adaozañ a pour double objectif de rendre désirable un déchet par la mise en valeur de ses caractéristiques esthétiques et sensorielles, mais aussi en faisant éveiller une prise de conscience de l’impact direct de nos déchets sur nos territoire.`,

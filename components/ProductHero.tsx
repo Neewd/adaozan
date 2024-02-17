@@ -4,6 +4,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Image as PrestationImage } from "./prestations.data";
 
 export interface ProductHeroProps {
 	id: number;
@@ -14,12 +15,13 @@ export interface ProductHeroProps {
 	slug: string;
 	objectPosition?: string;
 	description?: string;
-	carousel: string[];
+	carousel: PrestationImage[];
 	content: string;
 	subContent: string;
 	price: string;
 	details?: string[];
 	orderButton: string;
+	availability?: string;
 }
 
 export const ProductHero = ({

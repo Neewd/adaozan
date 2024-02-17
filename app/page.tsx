@@ -5,6 +5,7 @@ import { Menu } from "@/components/Menu";
 import Image from "next/image";
 import Products from "@/components/Products";
 import Abouts from "@/components/Abouts";
+import { PrestationsHero } from "@/components/PrestationsHero";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -50,6 +51,7 @@ export default async function Home() {
 			<Products withDescription={false} />
 			<Abouts />
 			<LogoCloud />
+			<PrestationsHero />
 			<ContactHero />
 		</div>
 	);
