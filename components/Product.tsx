@@ -42,16 +42,19 @@ export default async function Product({ id }: { id: string }) {
 
 					<Menu />
 
-					<div className="flex border-b border-brown-100 relative">
+					<div className="flex border-b border-brown-100 relative bg-cream-100">
 						<div className="basis-6/12 flex relative bg-cream-100">
 							<Carousel images={product.carousel} />
 						</div>
-						<div className="flex-1 border-l border-brown-100 font-heading">
+						<div className="flex-1 border-l border-brown-100 font-heading relative">
 							<div className="p-8 flex-col text-brown-100 border-b border-brown-100 flex relative z-10 bg-cream-100 gap-2">
 								<span className="font-bold">
 									{product.subtitle}
 								</span>
 								<span>{product.content}</span>
+								<span className="font-bold">
+									{product.subContentTitle}
+								</span>
 								<span>{product.subContent}</span>
 							</div>
 							{product.details && (
@@ -75,9 +78,19 @@ export default async function Product({ id }: { id: string }) {
 								<span>-</span>
 								<span>{product.price}</span>
 							</div>
-							<button className="bg-brown-100 w-full text-cream-100 p-8 text-left hover:cursor-pointer">
-								{product.orderButton}
-							</button>
+							{product.orderButtonUrl && (
+								<a
+									className="flex bg-brown-100 w-full text-cream-100 p-8 text-left hover:cursor-pointer"
+									href={product.orderButtonUrl}
+								>
+									{product.orderButton}
+								</a>
+							)}
+							{!product.orderButtonUrl && (
+								<button className="bg-brown-100 w-full text-cream-100 p-8 text-left hover:cursor-pointer">
+									{product.orderButton}
+								</button>
+							)}
 						</div>
 					</div>
 				</>

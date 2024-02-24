@@ -3,31 +3,31 @@ import Link from "next/link";
 
 const logos: { imageUrl: string; linkUrl: string }[] = [
 	{
-		imageUrl: "/img/partenaires/region-bretagne.png",
-		linkUrl: "https://aides.bretagne.bzh/aides/#/crbr/",
+		imageUrl: "/img/partenaires/region-bretagne.webp",
+		linkUrl: "https://www.bretagne.bzh/",
 	},
 	{
-		imageUrl: "/img/partenaires/technopole.png",
-		linkUrl: "https://7technopoles-bretagne.bzh/",
+		imageUrl: "/img/partenaires/technopole.webp",
+		linkUrl: "https://www.tech-quimper.bzh/",
 	},
 	{
 		imageUrl: "/img/partenaires/grdf.png",
-		linkUrl: "https://www.grdf.fr/",
+		linkUrl: "https://fondationgrdf.fr/",
 	},
 	{
-		imageUrl: "/img/partenaires/live-for-good.png",
+		imageUrl: "/img/partenaires/live-for-good.webp",
 		linkUrl: "https://www.live-for-good.org/",
 	},
 	{
-		imageUrl: "/img/partenaires/banque-postale.png",
+		imageUrl: "/img/partenaires/banque-postale.webp",
 		linkUrl: "https://www.labanquepostale.fr/",
 	},
 	{
-		imageUrl: "/img/partenaires/makesense.png",
+		imageUrl: "/img/partenaires/makesense.webp",
 		linkUrl: "https://makesense.org/",
 	},
 	{
-		imageUrl: "/img/partenaires/fondation-de-france.png",
+		imageUrl: "/img/partenaires/fondation-de-france.webp",
 		linkUrl: "https://www.fondationdefrance.org/fr/",
 	},
 ];

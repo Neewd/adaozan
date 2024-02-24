@@ -6,7 +6,7 @@ export const PrestationsHero = () => {
 	return (
 		<div className="flex relative border-b border-brown-100 z-10 bg-cream-100">
 			<div className="flex flex-col basis-4/12">
-				<div className="bg-brown-100 px-8 py-4 flex text-cream-100 uppercase text-lg">
+				<div className="bg-brown-100 px-8 py-4 flex text-cream-100 uppercase text-lg font-heading">
 					Prestations
 				</div>
 				{prestations.prestationsHeros.map((text: PrestationTexts) => (

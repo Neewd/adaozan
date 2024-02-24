@@ -4,9 +4,9 @@ export const products: ProductHeroProps[] = [
 	{
 		id: 1,
 		imageUrl: "/img/produits/decouverte.webp",
-		imageAlt: "Pack découverte",
+		imageAlt: "Coffret échantillon",
 		title: "Produits",
-		subtitle: "Pack découverte",
+		subtitle: "Coffret échantillon",
 		slug: "pack-decouverte",
 		price: "18€ (frais de port compris)",
 		details: ["Diamètre : 8cm", "Épaisseur : 5mm"],
@@ -47,10 +47,10 @@ export const products: ProductHeroProps[] = [
 		id: 2,
 		imageUrl: "/img/produits/premieres-creations.webp",
 		imageAlt: "Les objets réalisés par Adaozan",
-		title: "Produits",
+		title: "Vide poche",
 		subtitle: "Premières créations",
 		slug: "objets",
-		price: "39€",
+		price: "32€ TTC",
 		details: [
 			"Dimensions : longueur 22cm x largeur10cm",
 			"Épaisseur : 3cm",
@@ -62,6 +62,7 @@ export const products: ProductHeroProps[] = [
 		description: `Tout premier objet de notre série auto-éditiée d’objets du quotidien au design simple et élégant, fabriqués à la main dans notre atelier breton
       `,
 		orderButton: "Commande",
+		orderButtonUrl: "https://buy.stripe.com/dR68x62Tm52PdIQ7su",
 		carousel: [
 			{
 				id: 1,
@@ -95,17 +96,19 @@ export const products: ProductHeroProps[] = [
 		imageUrl: "/img/produits/sur-mesure.webp",
 		imageAlt: "Image d'exemple de projet sur mesure réalisés par Adaozan",
 		title: "Produits",
-		subtitle: "Projets-sur-mesure",
+		subtitle: "Coffret découverte",
 		objectPosition: "right",
 		slug: "projet-sur-mesure",
-		price: "Nous consulter",
-		availability: "A venir",
-		content: "Projet sur mesure, commme une crédence personalisée",
+		price: "48€ TTC",
+		content:
+			"Coffret permettant de découvrir différentes facettes de notre capacité de transformation de notre matière.",
 		subContent:
-			"Proposition d’accompagnement professionnel personnalisé pour des projets sur-mesure uniques et déclinables, de l’objet au mobilier",
+			"Un vide-poche texture au choix, un échantillon gravé au laser et une lettre découpée à la commande numérique.",
+		subContentTitle: "Contenu",
 		description:
-			"Proposition d’accompagnement professionnel personnalisé pour des projets sur-mesure uniques et déclinables, de l’objet au mobilier",
-		orderButton: "Demande de prix",
+			"Un vide-poche texture au choix, un échantillon gravé au laser et une lettre découpée à la commande numérique.",
+		orderButton: "Commande",
+		orderButtonUrl: "https://buy.stripe.com/aEUcNmbpS9j55ck289",
 		carousel: [
 			{
 				id: 1,

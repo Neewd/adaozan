@@ -17,10 +17,12 @@ export interface ProductHeroProps {
 	description?: string;
 	carousel: PrestationImage[];
 	content: string;
+	subContentTitle?: string;
 	subContent: string;
 	price: string;
 	details?: string[];
-	orderButton: string;
+	orderButton?: string;
+	orderButtonUrl?: string;
 	availability?: string;
 }
 

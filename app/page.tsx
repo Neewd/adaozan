@@ -27,7 +27,7 @@ export default async function Home() {
 							className="object-cover"
 						/>
 					</Link>
-					<div className="flex flex-col gap-4 text-xl font-heading">
+					<div className="flex flex-col gap-4 text-2xl font-heading">
 						<span className="text-cream-100">
 							Un éco-matériau local et innovant valorisant les
 							déchets de pommes issus de l’industrie du cidre pour
