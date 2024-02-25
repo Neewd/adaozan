@@ -47,8 +47,8 @@ export const products: ProductHeroProps[] = [
 		id: 2,
 		imageUrl: "/img/produits/premieres-creations.webp",
 		imageAlt: "Les objets réalisés par Adaozan",
-		title: "Vide poche",
-		subtitle: "Premières créations",
+		title: "Produits",
+		subtitle: "Vide poche",
 		slug: "objets",
 		price: "32€ TTC",
 		details: [
