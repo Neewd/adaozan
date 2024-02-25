@@ -3,6 +3,7 @@ import { Menu } from "@/components/Menu";
 import Image from "next/image";
 import { products } from "./produits.data";
 import { ProductHeroProps } from "./ProductHero";
+import Logo from "@/components/Logo";
 
 export default async function Product({ id }: { id: string }) {
 	const product: ProductHeroProps | undefined = products.find(
@@ -14,12 +15,7 @@ export default async function Product({ id }: { id: string }) {
 				<>
 					<div className="flex top-0 sticky w-full z-1 h-[90vh]">
 						<div className="flex basis-4/12 p-6 h-full flex-col justify-between ">
-							<Image
-								src="/img/logo-description-white.webp"
-								width={500}
-								height={500}
-								alt="Logo Adaozan"
-							/>
+							<Logo />
 							<div className="p-8 flex-col flex">
 								<span className="text-lg font-heading text-cream-100">
 									{product.title}

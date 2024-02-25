@@ -3,7 +3,7 @@ import { ContactHero } from "@/components/ContactHero";
 import { Metadata } from "next";
 import { Menu } from "@/components/Menu";
 import Products from "@/components/Products";
-import Link from "next/link";
+import Logo from "@/components/Logo";
 
 export const metadata: Metadata = {
 	title: "Adaozañ - Produits",
@@ -15,15 +15,7 @@ export default function Produits() {
 		<div className="w-full bg-brown-100 relative h-min min-h-full">
 			<div className="flex top-0 sticky w-full z-1 h-[90vh]">
 				<div className="basis-4/12 p-6 flex flex-col justify-between">
-					<Link href="/">
-						<Image
-							src="/img/logo-description-white.webp"
-							width={500}
-							height={500}
-							alt="Logo Adaozan"
-							className="object-cover"
-						/>
-					</Link>
+					<Logo />
 					<div className="flex flex-col gap-4 text-xl font-heading">
 						<span className="text-cream-100 font-heading-bold font-bold text-2xl">
 							Produits

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ContactHero } from "@/components/ContactHero";
 import { Menu } from "@/components/Menu";
+import Logo from "@/components/Logo";
 
 export default function CGV() {
 	return (
@@ -8,12 +9,7 @@ export default function CGV() {
 			<div className="w-full bg-brown-100 relative h-min min-h-full">
 				<div className="flex top-0 sticky w-full z-1 h-[20vh]">
 					<div className="basis-4/12 p-6 flex flex-col justify-between">
-						<Image
-							src="/img/logo-description-white.webp"
-							width={300}
-							height={300}
-							alt="Logo Adaozan"
-						/>
+						<Logo />
 					</div>
 					<div className="basis-8/12 relative p-6 flex flex-col justify-between items-end">
 						<span className="text-lg font-heading text-cream-100">

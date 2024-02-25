@@ -3,6 +3,7 @@ import { Menu } from "@/components/Menu";
 import Image from "next/image";
 import classNames from "classnames";
 import { abouts } from "./a-propos.data";
+import Logo from "@/components/Logo";
 
 export default async function About({ id }: { id: string }) {
 	const about: AboutHeroProps | undefined = abouts.find(
@@ -15,13 +16,7 @@ export default async function About({ id }: { id: string }) {
 					<div className="flex top-0 sticky w-full z-1 h-[90vh]">
 						<div className="flex-1 ">
 							<div className="flex basis-4/12 p-6 flex-col justify-between h-full relative">
-								<Image
-									className="object-cover"
-									src="/img/logo-description-white.webp"
-									width={500}
-									height={500}
-									alt="Logo Adaozan"
-								/>
+								<Logo />
 								<div className="px-8 py-4 flex-col flex bottom-0">
 									<span className="text-lg font-heading text-cream-100">
 										{about.title}
