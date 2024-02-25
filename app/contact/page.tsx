@@ -16,7 +16,7 @@ export default function Contact() {
 				<div className="basis-4/12 p-6 flex flex-col justify-between">
 					<Link href="/">
 						<Image
-							src="/img/logo-description-white.png"
+							src="/img/logo-description-white.webp"
 							width={500}
 							height={500}
 							alt="Logo Adaozan"

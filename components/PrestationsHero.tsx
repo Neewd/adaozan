@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { PrestationTexts, prestations } from "./prestations.data";
 import Carousel from "./Carousel";
 

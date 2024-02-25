@@ -15,7 +15,7 @@ export default async function Product({ id }: { id: string }) {
 					<div className="flex top-0 sticky w-full z-1 h-[90vh]">
 						<div className="flex basis-4/12 p-6 h-full flex-col justify-between ">
 							<Image
-								src="/img/logo-description-white.png"
+								src="/img/logo-description-white.webp"
 								width={500}
 								height={500}
 								alt="Logo Adaozan"

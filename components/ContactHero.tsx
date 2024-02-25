@@ -75,7 +75,7 @@ export const ContactHero = () => {
 				>
 					<Image
 						className="block"
-						src="/img/logo-tilde-white.png"
+						src="/img/logo-tilde-white.webp"
 						alt="Link to home page"
 						width={25}
 						height={35}
