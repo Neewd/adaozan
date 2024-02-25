@@ -36,6 +36,7 @@ export default async function Home() {
 						src="/img/valorisation-marc-de-pomme.webp"
 						alt="Valorisation marc de pomme"
 						fill={true}
+						priority={true}
 					/>
 				</div>
 			</div>

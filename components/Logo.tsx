@@ -9,6 +9,7 @@ export default function Logo() {
 				width={500}
 				height={500}
 				alt="Logo Adaozan"
+				priority={true}
 				className="object-cover"
 			/>
 		</Link>
