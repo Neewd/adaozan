@@ -4,6 +4,7 @@ import Image from "next/image";
 import classNames from "classnames";
 import { abouts } from "./a-propos.data";
 import Logo from "@/components/Logo";
+import HeaderMobile from "@/components/HeaderMobile";
 
 export default async function About({ id }: { id: string }) {
 	const about: AboutHeroProps | undefined = abouts.find(
@@ -13,7 +14,7 @@ export default async function About({ id }: { id: string }) {
 		<>
 			{about && (
 				<>
-					<div className="flex top-0 sticky w-full z-1 h-[90vh]">
+					<div className="hidden sm:flex top-0 sticky w-full z-1 h-[90vh]">
 						<div className="flex-1 ">
 							<div className="flex basis-4/12 p-6 flex-col justify-between h-full relative">
 								<Logo />
@@ -37,17 +38,24 @@ export default async function About({ id }: { id: string }) {
 							/>
 						</div>
 					</div>
+					<HeaderMobile>
+						<span className="text-lg font-heading text-cream-100">
+							{about.title}
+						</span>
+						<span className="text-lg font-bold font-heading text-cream-100">
+							{about.subtitle}
+						</span>
+					</HeaderMobile>
+					<Menu className="hidden sm:flex"/>
 
-					<Menu />
-
-					<div className="flex relative bg-cream-100">
+					<div className="flex flex-col sm:flex-row relative bg-cream-100">
 						{about.descriptions.map((description, index) => {
 							return (
 								<div
 									className={classNames(
 										"flex flex-1 border-b border-brown-100 flex-col",
 										{
-											"border-r":
+											"sm:border-r":
 												index !==
 												about.descriptions.length - 1,
 										}

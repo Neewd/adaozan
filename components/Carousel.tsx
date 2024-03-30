@@ -20,27 +20,38 @@ export default function Carousel({
 	const [nextImageIndex, setNextImageIndex] = useState(0);
 
 	const [previousImageUrl, setPreviousImageUrl] = useState("");
+	const [previousImageIndexKey, setPreviousImageIndexKey] = useState("0");
 	const [currentImageUrl, setCurrentImageUrl] = useState("");
+	const [currentImageIndexKey, setCurrentImageIndexKey] = useState("1");
 	const [nextImageUrl, setNextImageUrl] = useState("");
+	const [nextImageIndexKey, setNextImageIndexKey] = useState("2");
 
 	useEffect(() => {
 		let previousImageIndex = currentImageIndex - 1;
 		let nextImageIndex = currentImageIndex + 1;
-		setPreviousImageIndex(previousImageIndex);
-		setNextImageIndex(nextImageIndex);
 
 		setCurrentImageUrl(images[currentImageIndex]?.url);
-		setPreviousImageUrl(images[previousImageIndex]?.url);
-		setNextImageUrl(images[nextImageIndex]?.url);
+		setCurrentImageIndexKey(`${images[currentImageIndex]?.url}-1`);
 
 		if (currentImageIndex === 0) {
 			previousImageIndex = images.length - 1;
 			setPreviousImageIndex(images.length - 1);
 			setPreviousImageUrl(images[previousImageIndex]?.url);
+			setPreviousImageIndexKey(`${images[previousImageIndex]?.url}-0`);
+		} else {
+			setPreviousImageIndex(previousImageIndex);
+			setPreviousImageUrl(images[previousImageIndex]?.url);
+			setPreviousImageIndexKey(`${images[previousImageIndex]?.url}-0`);
 		}
+
 		if (currentImageIndex === images.length) {
 			setNextImageIndex(0);
 			setNextImageUrl(images[0]?.url);
+			setNextImageIndexKey(`${images[nextImageIndex]?.url}-2`);
+		} else {
+			setNextImageUrl(images[nextImageIndex]?.url);
+			setNextImageIndex(nextImageIndex);
+			setNextImageIndexKey(`${images[nextImageIndex]?.url}-2`);
 		}
 	}, [currentImageIndex]);
 
@@ -59,28 +70,37 @@ export default function Carousel({
 	return (
 		<div className="bg-cream-100 h-full w-full relative">
 			<>
-				<Image
-					key={previousImageIndex}
-					src={previousImageUrl}
-					alt=""
-					fill={true}
-					className="hidden"
-				/>
-				<Image
-					key={currentImageIndex}
-					src={currentImageUrl}
-					alt=""
-					fill={true}
-					priority={true}
-					className="object-cover min-h-full w-full"
-				/>
-				<Image
-					key={nextImageIndex}
-					src={nextImageUrl}
-					alt=""
-					fill={true}
-					className="hidden"
-				/>
+				{ previousImageUrl &&
+					<Image
+						key={previousImageIndexKey}
+						src={previousImageUrl}
+						alt="previous image"
+						fill={true}
+						className="hidden"
+					/>
+				}
+				{ currentImageUrl &&
+					<Image
+						key={currentImageIndexKey}
+						src={currentImageUrl}
+						alt="current image"
+						fill={true}
+						priority={true}
+						className="object-cover min-h-full w-full"
+					/>
+				}
+				{ nextImageUrl &&
+					<Image
+						key={nextImageIndexKey}
+						src={nextImageUrl}
+						alt="next image"
+						fill={true}
+						className="hidden"
+					/>
+				}
+
+
+
 			</>
 			<div className="absolute inset-0 flex items-center justify-between px-4 h-full z-10">
 				<div
@@ -88,7 +108,7 @@ export default function Carousel({
 						"fill-brown-100": cursorColor === "brown",
 						"fill-cream-100": cursorColor === "cream",
 					})}
-					onClick={handleNext}
+					onClick={handlePrevious}
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -104,7 +124,7 @@ export default function Carousel({
 						"fill-brown-100": cursorColor === "brown",
 						"fill-cream-100": cursorColor === "cream",
 					})}
-					onClick={handlePrevious}
+					onClick={handleNext}
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

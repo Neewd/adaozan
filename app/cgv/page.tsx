@@ -2,12 +2,13 @@ import Image from "next/image";
 import { ContactHero } from "@/components/ContactHero";
 import { Menu } from "@/components/Menu";
 import Logo from "@/components/Logo";
+import HeaderMobile from "@/components/HeaderMobile";
 
 export default function CGV() {
 	return (
 		<>
 			<div className="w-full bg-brown-100 relative h-min min-h-full">
-				<div className="flex top-0 sticky w-full z-1 h-[20vh]">
+				<div className="hidden sm:flex top-0 sticky w-full z-1 h-[20vh]">
 					<div className="basis-4/12 p-6 flex flex-col justify-between">
 						<Logo />
 					</div>
@@ -16,15 +17,21 @@ export default function CGV() {
 							Conditions générales
 						</span>
 						<span className="text-lg font-heading text-cream-100">
-							Propriété intellectuelle, DOnnérs à caractaire
-							personnel, Responsabilité et Conditions générales de
+							Propriété intellectuelle, Données à caractères
+							personnels, Responsabilité et Conditions générales de
 							Vente (CGV)
 						</span>
 					</div>
 				</div>
-				<Menu />
+				<HeaderMobile>
+					<span className="text-lg font-heading text-cream-100">
+						Conditions générales
+					</span>
+				</HeaderMobile>
+				<Menu className="hidden sm:flex"/>
 
-				<div className="flex flex-col border-b border-r-brown-100 bg-cream-100 relative text-brown-100 font-heading">
+				<div
+					className="flex flex-col border-b border-r-brown-100 bg-cream-100 relative text-brown-100 font-heading">
 					<div className="flex flex-1 border-b border-brown-100 p-6 flex-col">
 						<h2 className="mb-2 font-bold">
 							CONDITIONS GENERALES DE VENTE (CGV)

@@ -3,6 +3,7 @@ import { Menu } from "@/components/Menu";
 import { ContactHero } from "@/components/ContactHero";
 import Image from "next/image";
 import Logo from "@/components/Logo";
+import HeaderMobile from "@/components/HeaderMobile";
 
 export const metadata: Metadata = {
 	title: "Adaozañ - Contact",
@@ -11,10 +12,10 @@ export const metadata: Metadata = {
 
 export default function Contact() {
 	return (
-		<>
-			<div className="flex top-0 sticky w-full z-1 h-[90vh] bg-brown-100 text-cream-100">
+		<div className="w-full bg-brown-100 relative h-min min-h-full">
+			<div className="hidden sm:flex top-0 sticky w-full z-1 h-[90vh] bg-brown-100 text-cream-100 min-h-full">
 				<div className="basis-4/12 p-6 flex flex-col justify-between">
-					<Logo />
+					<Logo/>
 					<div className="flex flex-col gap-4 text-xl font-heading">
 						<span className="text-cream-100 font-heading-bold font-bold text-2xl">
 							Contact
@@ -36,16 +37,22 @@ export default function Contact() {
 					/>
 				</div>
 			</div>
-			<Menu />
-			<div className="flex bg-cream-100 h-96 relative font-heading border-b border-brown-100 text-brown-100">
-				<div className="flex flex-1 flex-col p-8 border-r border-brown-100 justify-between">
+			<HeaderMobile>
+                <span className="text-cream-100 font-heading-bold py-2 text-2xl">
+					Contact
+				</span>
+			</HeaderMobile>
+			<Menu className="hidden sm:flex"/>
+
+			<div className="flex sm:flex-row flex-col bg-cream-100 sm:h-96 relative font-heading border-b border-brown-100 text-brown-100">
+				<div className="flex flex-1 flex-col p-8 border-b sm:border-r border-brown-100 justify-between">
 					<span className="text-lg ">Nous écrire</span>
 					<div className="flex flex-col">
 						<span className="font-bold">contact@adaozan.fr</span>
 						<span>instagram/facebook/linkedin</span>
 					</div>
 				</div>
-				<div className="flex flex-1 flex-col p-8  border-r border-brown-100 justify-between">
+				<div className="flex flex-1 flex-col p-8   border-b sm:border-r border-brown-100 justify-between">
 					<div className="flex flex-col">
 						<span className="text-lg">Nous rendre visite</span>
 						<span className="text-lg">(sur rendez-vous)</span>
@@ -68,7 +75,7 @@ export default function Contact() {
 					</div>
 				</div>
 			</div>
-			<ContactHero />
-		</>
+			<ContactHero/>
+		</div>
 	);
 }

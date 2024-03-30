@@ -4,11 +4,11 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
 
-export function Menu() {
+export function Menu({ className }: { className?: string }) {
 	const currentRoute = usePathname();
 	return (
-		<>
-			<div className="flex h-20 border-y border-cream-100 z-20 sticky top-[-2px] bg-brown-100">
+		<div className={className}>
+			<div className="flex h-20 border-y border-cream-100 z-20 sticky top-[-2px] bg-brown-100 flex-1">
 				<div className="basis-4/12 border-r flex items-center bg-brown-100 text-cream-100">
 					<div className="w-full px-4 h-full items-center flex">
 						<Link
@@ -60,6 +60,6 @@ export function Menu() {
 					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

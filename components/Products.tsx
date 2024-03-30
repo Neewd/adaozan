@@ -8,7 +8,7 @@ export default async function Products({
 }) {
 	return (
 		<>
-			<div className="flex z-10 relative">
+			<div className="flex z-10 relative flex-col sm:flex-row">
 				{products.map((product) => {
 					return (
 						<ProductHero

@@ -3,7 +3,7 @@ import Carousel from "./Carousel";
 
 export const PrestationsHero = () => {
 	return (
-		<div className="flex relative border-b border-brown-100 z-10 bg-cream-100">
+		<div className="flex flex-col sm:flex-row relative border-b border-brown-100 z-10 bg-cream-100">
 			<div className="flex flex-col basis-4/12">
 				<div className="bg-brown-100 px-8 py-4 flex text-cream-100 uppercase text-lg font-heading">
 					Prestations
@@ -22,7 +22,7 @@ export const PrestationsHero = () => {
 					</div>
 				))}
 			</div>
-			<div className="flex flex-col basis-8/12 relative">
+			<div className="flex flex-col sm:basis-8/12 relative h-[250px] sm:h-auto basis-auto">
 				<Carousel images={prestations.images} cursorColor="cream" />
 			</div>
 		</div>

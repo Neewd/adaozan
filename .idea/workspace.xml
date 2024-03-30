@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3a570e8c-438c-450f-ab6e-a15208ab6e96" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/HeaderMobile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/a-propos/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/a-propos/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cgv/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/cgv/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/contact/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/legal/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/legal/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/produits/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/produits/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/About.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/About.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AboutHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/AboutHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Abouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Abouts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ContactHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ContactHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/LogoCloud.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/LogoCloud.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/PrestationsHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/PrestationsHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Product.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Product.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProductHero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ProductHero.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Products.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Products.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2ePa0ATmuGxR1kKx7Z5zIsZh5ox" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/c.bacouelle/dev/adaozan",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/c.bacouelle/dev/adaozan/node_modules/typescript/lib"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3a570e8c-438c-450f-ab6e-a15208ab6e96" name="Changes" comment="" />
+      <created>1711808441374</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1711808441374</updated>
+      <workItem from="1711808442481" duration="285000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -44,7 +44,7 @@ export const AboutHero = ({
 	return (
 		<Link
 			href={`a-propos/${id}`}
-			className=" flex w-full relative p-4 bg-cream-100 border-r border-b border-brown-100 last:border-r-0"
+			className=" flex w-full relative px-4 pt-4 bg-cream-100 border-r border-b border-brown-100 last:border-r-0"
 		>
 			<div className="flex flex-col w-full bg-cream-100 cursor-pointer aspect-square">
 				<div className="flex h-full w-full relative ">

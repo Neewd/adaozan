@@ -4,6 +4,7 @@ import Image from "next/image";
 import { products } from "./produits.data";
 import { ProductHeroProps } from "./ProductHero";
 import Logo from "@/components/Logo";
+import HeaderMobile from "@/components/HeaderMobile";
 
 export default async function Product({ id }: { id: string }) {
 	const product: ProductHeroProps | undefined = products.find(
@@ -13,7 +14,7 @@ export default async function Product({ id }: { id: string }) {
 		<>
 			{product && (
 				<>
-					<div className="flex top-0 sticky w-full z-1 h-[90vh]">
+					<div className="hidden sm:flex top-0 sticky w-full z-1 h-[90vh]">
 						<div className="flex basis-4/12 p-6 h-full flex-col justify-between ">
 							<Logo />
 							<div className="p-8 flex-col flex">
@@ -35,14 +36,21 @@ export default async function Product({ id }: { id: string }) {
 							/>
 						</div>
 					</div>
+					<HeaderMobile>
+						<span className="text-lg font-heading text-cream-100">
+							{product.title}
+						</span>
+						<span className="text-lg font-bold mb-4 font-heading text-cream-100">
+							{product.subtitle}
+						</span>
+					</HeaderMobile>
+					<Menu className="hidden sm:flex"/>
 
-					<Menu />
-
-					<div className="flex border-b border-brown-100 relative bg-cream-100">
-						<div className="basis-6/12 flex relative bg-cream-100">
+					<div className="flex flex-col sm:flex-row border-b border-brown-100 relative bg-cream-100">
+						<div className="sm:basis-6/12 relative h-[300px] sm:h-auto basis-auto">
 							<Carousel images={product.carousel} />
 						</div>
-						<div className="flex-1 border-l border-brown-100 font-heading relative">
+						<div className="flex-1 border-t sm:border-t-0 sm:border-l border-brown-100 font-heading relative">
 							<div className="p-8 flex-col text-brown-100 border-b border-brown-100 flex relative z-10 bg-cream-100 gap-2">
 								<span className="font-bold">
 									{product.subtitle}

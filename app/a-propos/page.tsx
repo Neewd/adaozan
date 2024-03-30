@@ -4,6 +4,7 @@ import { Menu } from "@/components/Menu";
 import { ContactHero } from "@/components/ContactHero";
 import Logo from "@/components/Logo";
 import Image from "next/image";
+import HeaderMobile from "@/components/HeaderMobile";
 
 export const metadata: Metadata = {
 	title: "Adaozañ - A propos",
@@ -12,9 +13,9 @@ export const metadata: Metadata = {
 
 export default async function About() {
 	return (
-		<>
-			<div className="flex top-0 sticky w-full z-1 h-[90vh] bg-brown-100 text-cream-100">
-				<div className="basis-4/12 p-6 flex flex-col justify-between">
+		<div className="w-full bg-brown-100 relative h-min min-h-full">
+			<div className="hidden sm:flex top-0 sticky w-full z-1 h-[90vh] bg-brown-100 text-cream-100 min-h-full">
+				<div className="flex basis-4/12 p-6 flex-col justify-between bg-brown-100">
 					<Logo />
 					<div className="flex flex-col gap-4 text-xl font-heading">
 						<span className="text-cream-100 font-heading-bold font-bold text-2xl">
@@ -37,9 +38,14 @@ export default async function About() {
 					/>
 				</div>
 			</div>
-			<Menu />
+			<HeaderMobile>
+                <span className="text-cream-100 font-heading-bold py-2 text-2xl">
+					À propos
+				</span>
+			</HeaderMobile>
+			<Menu className="hidden sm:flex" />
 			<Abouts withDescription={true} />
 			<ContactHero />
-		</>
+		</div>
 	);
 }

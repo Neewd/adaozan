@@ -8,7 +8,7 @@ export default async function Abouts({
 }) {
 	return (
 		<>
-			<div className="flex z-10 relative">
+			<div className="flex z-10 relative flex-col sm:flex-row">
 				{abouts.map((about, index) => {
 					return (
 						<AboutHero
