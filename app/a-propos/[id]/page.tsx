@@ -4,7 +4,7 @@ import About from '@/components/About';
 
 export const metadata: Metadata = {
   description: 'Terme breton, définition: recycler, revaloriser',
-  title: 'Adaozañ - A propos',
+  title: 'Adaozañ - À propos',
 };
 
 export default async function AboutId({ params }: { params: { id: string } }) {

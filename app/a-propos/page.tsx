@@ -7,7 +7,7 @@ import Image from "next/image";
 import HeaderMobile from "@/components/HeaderMobile";
 
 export const metadata: Metadata = {
-	title: "Adaozañ - A propos",
+	title: "Adaozañ - À propos",
 	description: "Terme breton, définition: recycler, revaloriser",
 };
 
